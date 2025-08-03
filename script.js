@@ -60,6 +60,15 @@ const playGame = function() {
         }
     }
 
+    window.alert(`Status:
+        Wins: ${stats.wins}
+        Losses: ${stats.losses}
+        Ties: ${stats.ties}
+        
+        Your choices:
+        Rock: ${stats.count.rock}
+        Paper: ${stats.count.paper}
+        Scissors: ${stats.count.scissors}`)
 }
 
 playGame();
