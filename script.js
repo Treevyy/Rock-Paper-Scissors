@@ -36,7 +36,30 @@ const playGame = function() {
                     stats.count.scissors++;
                     break;
             }
+            
+            const index = Math.floor(Math.random() * options.length);
+            const computerChoice = options[index];
+
+            window.alert(`The computer chose ${computerChoice}`);
+
+            if (userChoice === computerChoice){
+                stats.ties++;
+                window.alert("It's a tie!")
+            } else if (
+                (userChoice === 'R' && computerChoice === 'S') ||
+                (userChoice === 'P' && computerChoice === 'R') ||
+                (userChoice === 'S' && computerChoice === 'P')){
+                stats.wins++;
+                window.alert('You win!')
+            } else {
+                stats.losses++;
+                window.alert('You lost!')
+            }
+
+            keepPlaying = window.confirm('Play again?')
         }
+    }
+
 }
 
 playGame();
