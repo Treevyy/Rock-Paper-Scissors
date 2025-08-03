@@ -9,5 +9,9 @@ const playGame = function() {
             scissors: 0,
         }
     }
+
+    const options = ['R', 'P', 'S'];
+
 }
+
 playGame();
